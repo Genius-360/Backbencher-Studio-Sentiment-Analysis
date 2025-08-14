@@ -33,14 +33,14 @@ As a bonus, I built a Long Short-Term Memory (LSTM) network, which is well-suite
 
 ## Results
 
-The following table summarizes the performance of my final, optimized models. The accuracy for the Logistic Regression model is its **cross-validated score**, which is a highly reliable measure of its generalization performance.
+The following table summarizes the performance of my models. I have included the accuracy from the initial baseline Logistic Regression run alongside the more reliable mean accuracy from the 3-fold cross-validated `GridSearchCV` optimization.
 
-| Model | Accuracy | Precision | Recall | F1-Score |
-|---|---|---|---|---|
-| **Optimized Logistic Regression** | **0.8908** *(single baseline run)* and **0.8766** *(CV accuracy)* | 0.8706 | 0.9150 | 0.8923 |
-| **LSTM with Early Stopping** | **0.8876** | 0.8594 | 0.8952 | 0.8769 |
+| Model | Baseline Accuracy (Single Run) | Final Accuracy (CV) | Precision | Recall | F1-Score |
+|---|---|---|---|---|---|
+| **Optimized Logistic Regression** | 0.8908 | **0.8766** | 0.8706 | 0.9150 | 0.8923 |
+| **LSTM with Early Stopping** | - | **0.8876** | 0.8594 | 0.8952 | 0.8769 |
 
-*Note: The Logistic Regression accuracy is the mean score from 3-fold cross-validation. The metrics for the LSTM are from its best performance on the validation set before early stopping.*
+*Note: The Precision, Recall, and F1-Score for the Logistic Regression model correspond to the single baseline run. The primary performance metric for this model is its Final Cross-Validated (CV) Accuracy.*
 
 ## How to Run the Demo
 
