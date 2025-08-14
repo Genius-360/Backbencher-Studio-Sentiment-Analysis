@@ -33,14 +33,14 @@ As a bonus, I built a Long Short-Term Memory (LSTM) network, which is well-suite
 
 ## Results
 
-The following table summarizes the performance of my final, optimized models on the validation data. I am reporting the cross-validated accuracy for the Logistic Regression model, as it is a more robust and reliable measure of its generalization performance.
+The following table summarizes the performance of my final, optimized models. The accuracy for the Logistic Regression model is its **cross-validated score**, which is a highly reliable measure of its generalization performance.
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |---|---|---|---|---|
-| **Optimized Logistic Regression** | **0.8908** (CV Accuracy) | 0.8706 | 0.9150 | 0.8923 |
+| **Optimized Logistic Regression** | **0.8908** | 0.8706 | 0.9150 | 0.8923 |
 | **LSTM with Early Stopping** | **0.8876** | 0.8594 | 0.8952 | 0.8769 |
 
-*Note: Precision/Recall/F1 are reported for the LSTM on a single validation split, while the Logistic Regression accuracy is the more robust average from cross-validation.*
+*Note: The Logistic Regression accuracy is the mean score from 3-fold cross-validation. The metrics for the LSTM are from its best performance on the validation set before early stopping.*
 
 ## How to Run the Demo
 
@@ -55,10 +55,33 @@ First, clone the repository and install the necessary dependencies from the `req
 
 ```bash
 # Clone the repository
-git clone <your-github-repo-link>
+git clone https://github.com/Genius-360/Backbencher-Studio-Sentiment-Analysis.git
 
 # Navigate into the project directory
-cd <your-repo-name>
+cd Backbencher-Studio-Sentiment-Analysis
 
 # Install the required libraries
 pip install -r requirements.txt
+```
+### 3. Run the Script
+Execute the demo.py script. The script will first ensure the NLTK stopwords package is downloaded, then load the trained model and prompt you for input.
+
+```bash
+python demo.py
+```
+You can then enter any movie review to see the model's prediction. Type `quit` to exit the program.
+
+### Example Usage
+![alt text](assets/demo_screenshot.png)
+
+## Repository Contents
+- **AI_Engineer_Sentiment_Analysis.ipynb:** The main Jupyter Notebook with all code.
+- **README.md:** This explanatory file.
+- **demo.py:** A Python script for live sentiment prediction.
+- **requirements.txt:** A list of Python libraries required to run the project.
+- **best_logistic_regression_model.pkl:** The saved and optimized Logistic Regression model.
+- **tfidf_vectorizer.pkl:** The TF-IDF vectorizer fitted on the training data.
+- **lstm_model.h5:** The saved LSTM deep learning model.
+- **tokenizer.pkl:** The Keras tokenizer for the LSTM model.
+- **assets/demo_screenshot.png:** The screenshot of the demo script in action.
+- **train_data (1).csv / test_data (1).csv:** The original dataset files.
