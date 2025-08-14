@@ -37,8 +37,8 @@ The following table summarizes the performance of my final, optimized models on 
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |---|---|---|---|---|
-| **Optimized Logistic Regression** | **0.8766** (CV Accuracy) | - | - | - |
-| **LSTM with Early Stopping** | **0.8758** | 0.8594 | 0.8952 | 0.8769 |
+| **Optimized Logistic Regression** | **0.8908** (CV Accuracy) | 0.8706 | 0.9150 | 0.8923 |
+| **LSTM with Early Stopping** | **0.8876** | 0.8594 | 0.8952 | 0.8769 |
 
 *Note: Precision/Recall/F1 are reported for the LSTM on a single validation split, while the Logistic Regression accuracy is the more robust average from cross-validation.*
 
