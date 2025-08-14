@@ -84,4 +84,4 @@ You can then enter any movie review to see the model's prediction. Type `quit` t
 - **lstm_model.h5:** The saved LSTM deep learning model.
 - **tokenizer.pkl:** The Keras tokenizer for the LSTM model.
 - **assets/demo_screenshot.png:** The screenshot of the demo script in action.
-- **train_data (1).csv / test_data (1).csv:** The original dataset files.
+- **train_data (1).csv / test_data (1).csv:** The original dataset files. (Download from `https://www.kaggle.com/datasets/mantri7/imdb-movie-reviews-dataset`)
